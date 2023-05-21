@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\ArchivoController;
 use App\Http\Controllers\MedicamentoController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,6 @@ Route::middleware([
 
 Route::post('medicamento/{medicamento}/agrega-responsable', [MedicamentoController::class, 'agregaResponsable'])->name('medicamento.agrega-responsable');
 Route::resource('medicamento', MedicamentoController::class)->middleware('auth');
+
+Route::get('archivo/descargar/{archivo}', [ArchivoController::class, 'descargar'])->name('archivo.descargar');
+Route::resource('archivo', ArchivoController::class)->except(['edit', 'update', 'show']);
