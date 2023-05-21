@@ -1,2 +1,2 @@
 # farmacia_final
-Proyecto final sobre una farmacia homeopática
+Continuación del proyecto final sobre una farmacia homeopática
